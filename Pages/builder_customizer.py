@@ -61,10 +61,13 @@ added_team_name_text = (By.XPATH, "//*[@id='text-application-accordion']/li/div[
 select_added_team_name_font_ = (By.XPATH, "//*[@id='text-application-accordion']/li/div[3]/ul[1]/li/div[2]/div[2]/div/a[2]")
 team_name_tailsweep_location_add = (By.XPATH, "//*[@id='team-name-1-accordion-item-91']/div[3]/ul/li[3]/div/div[2]/div")
 team_select_each_tailsweep_add = (By.XPATH, "//*[@id='team-name-1-accordion-item-91']/div[3]/ul/li[3]/div/div[2]/div/div")
-select_font_accent_team_name_add = (By.XPATH, "//*[@id='team-name-1-1-accordion-item-91']/div[3]/ul/li[4]/div[1]/div[2]/div/div")
+select_font_accent_team_name_add = (By.XPATH, "//*[@class='uk-grid-small uk-child-width-1-6 con-font-accent uk-flex-middle uk-grid']/div/label")
 team_name_location_add = (By.XPATH, "//*[@class='accordion accordion-size-large accordion-gap-none uk-accordion']/li[@class='application-item']/div/label")
+default_toggle = (By.XPATH, "//*[@id='text-application-accordion']/li/div/label")
 
-
+input_player_name_text = (By.XPATH, "//*[@placeholder='Player Name']")
+font_accents_all_color = (By.XPATH, "//*[@class='uk-grid-small uk-child-width-auto con-color-palettes uk-flex-middle uk-width-1-1 uk-grid']/div/label")
+previous_arrow_pl_add = (By.XPATH, "//*[@id='text-application-accordion']/li[2]/div[3]/ul/li[1]/div[2]/div[2]/div/a[2]")
 
 class Customizer(BasePage):
 
@@ -210,6 +213,16 @@ class Customizer(BasePage):
         return self.wait_elements(select_font_accent_team_name_add)
     def team_name_locations_text_add(self):
         return self.wait_elements(team_name_location_add)
+
+    def player_name_text_body(self):
+        return self.wait_driver(input_player_name_text)
+    def default_toggles(self):
+        return self.wait_elements(default_toggle)
+    def all_color_font_accent(self):
+        return self.wait_elements(font_accents_all_color)
+    def previous_arrow_add_pl(self):
+        return self.wait_driver(previous_arrow_pl_add)
+
 
 
 

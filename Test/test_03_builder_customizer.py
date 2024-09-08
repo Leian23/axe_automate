@@ -275,6 +275,14 @@ class TestBuilder(BaseClass):
 
         time.sleep(1)
 
+        self.bottom_thumbnails()
+        all_default_toggles = item2.default_toggles()
+
+        for d_toggle in all_default_toggles:
+            self.driver.execute_script("arguments[0].scrollIntoView();", d_toggle)
+            d_toggle.click()
+            time.sleep(1)
+
         #start deleting the default texes
         all_trashes = item2.click_trashes()
 
@@ -293,47 +301,101 @@ class TestBuilder(BaseClass):
         for text_app in text_applications.options:
             print(text_app.text)
 
-            if (text_app.text.lower() == "team name"):
+            if text_app.text.lower() == "team name":
                 text_app.click()
                 time.sleep(2)
 
                 all_text_body_location_tn = item2.team_name_text_body_locations()
-
                 all_text_body_location_tn.click()
                 time.sleep(0.2)
-                item2.select_continue_btn().click()
+                continue_btn = item2.select_continue_btn()
+                self.driver.execute_script("arguments[0].scrollIntoView();", continue_btn)
+                continue_btn.click()
                 item2.team_name_front_body().send_keys("Testing")
                 time.sleep(2)
+
                 element4 = item2.team_name_font_add()
                 actions.double_click(element4).perform()
                 actions.double_click(element4).perform()
-                self.driver.execute_script("arguments[0].scrollIntoView();",
-                                           item2.position_of_tailsweep_team_name())
+
+                self.driver.execute_script("arguments[0].scrollIntoView();", item2.position_of_tailsweep_team_name())
                 tailsweeps_added_team_name = item2.team_name_tailsweep_select()
 
-                time.sleep(1)
                 for tn_tailsweep in tailsweeps_added_team_name:
                     tn_tailsweep.click()
                     time.sleep(1.7)
 
-                #tn_font_accents = item2.team_name_font_accent_add()
-                #time.sleep(1)
-
-                #for tn_accent in tn_font_accents:
-                #tn_accent.click()
-                #time.sleep(0.8)
-
+                tn_font_accents = item2.team_name_font_accent_add()
+                for tn_accent in tn_font_accents:
+                    tn_accent.click()
+                    time.sleep(0.8)
 
                 enable_team_name_location_add = item2.team_name_locations_text_add()
-                time.sleep(2)
-
-
                 for tn_toggle in enable_team_name_location_add:
-                    enable_tn = tn_toggle
-                    self.driver.execute_script("arguments[0].scrollIntoView();", enable_tn)
-                    enable_tn.click()
+                    self.driver.execute_script("arguments[0].scrollIntoView();", tn_toggle)
+                    tn_toggle.click()
                     time.sleep(1)
-                break
+            break
+
+        # Start adding the player name
+        add_player_name = item2.add_a_text()
+        self.driver.execute_script("arguments[0].scrollIntoView();", add_player_name)
+        add_player_name.click()
+        time.sleep(1)
+
+        mode_dropdown = Select(item2.select_text_application())
+        mode_dropdown.select_by_visible_text("Player Name")
+        time.sleep(1)
+
+
+        # Check if the selected option is "Player Name"
+        selected_option = mode_dropdown.first_selected_option.text.lower()
+        if selected_option == "player name":
+            front_body_text = item2.team_name_text_body_locations()
+            front_body_text.click()
+            time.sleep(1)
+
+            continue_btn1 = item2.select_continue_btn()
+            self.driver.execute_script("arguments[0].scrollIntoView();", continue_btn1)
+            continue_btn1.click()
+
+            time.sleep(1)
+            item2.player_name_text_body().send_keys("SQA")
+            time.sleep(2)
+
+            font_element5 = item2.previous_arrow_add_pl()
+            actions.double_click(font_element5).perform()
+            actions.double_click(font_element5).perform()
+
+            pl_font_accents = item2.team_name_font_accent_add()
+            for pl_accent in pl_font_accents:
+                pl_accent.click()
+                time.sleep(0.8)
+
+            all_font_color = item2.all_color_font_accent()
+
+            player_name_add_i = 6
+
+            for j, font_accents_pl_add in enumerate(all_font_color):
+                font_accents_pl_add.click()
+                time.sleep(0.8)
+
+                if (j + 1) % player_name_add_i == 0:
+                    random_choice = random.choice(select_font_accent_pl_name[j - player_name_add_i + 1:j + 1])
+                    random_choice.click()
+                    time.sleep(0.2)
+
+
+
+
+
+
+
+
+
+
+
+
 
     #--------------------------------------------------------------------
 

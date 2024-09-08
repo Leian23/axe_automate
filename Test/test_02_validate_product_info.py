@@ -178,14 +178,14 @@ class TestProductInfo(BaseClass):
         window_handles = self.driver.window_handles
 
         self.driver.switch_to.window(window_handles[-1])
-        self.driver.get("https://qx7-axe-customizer-stg.qstrike.net/admin")
+        self.driver.get("https://qx7-axe-customizer-stg.qstrike.net/admin/price_items")
 
-        time.sleep(3)
+        #time.sleep(3)
 
-        action = ActionChains(self.driver)
-        action.move_to_element(item2.hover_finance_tab()).perform()
-        time.sleep(2)
-        action.move_to_element(item2.click_price_items()).click().perform()
+        #action = ActionChains(self.driver)
+        #action.move_to_element(item2.hover_finance_tab()).perform()
+        #time.sleep(2)
+        #action.move_to_element(item2.click_price_items()).click().perform()
 
         time.sleep(2)
 

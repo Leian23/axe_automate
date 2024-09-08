@@ -124,7 +124,6 @@ class TestSearchItem(BaseClass, BaseTest):
 
 
     def test_search_specific_item(self):
-        time.sleep(2)
         item2 = SearchBrand(self.driver)
         time.sleep(2)
         item2.tips().click()
@@ -138,7 +137,7 @@ class TestSearchItem(BaseClass, BaseTest):
         self.driver.execute_script("arguments[0].scrollIntoView();", select_field)
         select_field.click()
 
-        time.sleep(2)
+        time.sleep(1)
 
         print(fetched_gender[0])
         if fetched_gender[0] == "Men":

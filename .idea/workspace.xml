@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da033a5d-b328-439c-9a35-cb58bccf6fad" name="Changes" comment="" />
+    <list default="true" id="da033a5d-b328-439c-9a35-cb58bccf6fad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/builder_customizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/builder_customizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/search_for_item_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/search_for_item_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_01_search_item.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_01_search_item.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_02_validate_product_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_02_validate_product_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/test_03_builder_customizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test/test_03_builder_customizer.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +24,26 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Leian23&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Leian23/axe_automate.git&quot;,
+    &quot;accountId&quot;: &quot;7a161513-e8fa-4300-9486-d90681139bcc&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2kPQdFX1hq5aKaNcazF5g5p7S1B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,6 +56,7 @@
     &quot;Python.hello_world.executor&quot;: &quot;Run&quot;,
     &quot;Python.pl_upgrade.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/qip-innovation/Desktop/axe_automate&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -105,6 +129,8 @@
       <workItem from="1725439214827" duration="46143000" />
       <workItem from="1725545782550" duration="529000" />
       <workItem from="1725547253187" duration="11430000" />
+      <workItem from="1725623428297" duration="96000" />
+      <workItem from="1725625680266" duration="36572000" />
     </task>
     <servers />
   </component>

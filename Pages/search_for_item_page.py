@@ -21,8 +21,8 @@ select_sport_and_gender = (By.XPATH, "//div/div/div/div/div/div/a")
 search_product_name = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/div[2]/input")
 close_tips = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[1]/div[3]/div/div/div[2]/div/div/p/div/div[2]/div")
 select_dropdown_gender = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/ul/li[2]/a")
-male_gender = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/ul/li[2]/div/ul/li[2]/div/label/div")
-female_gender = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/ul/li[2]/div/ul/li[3]")
+male_gender = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/ul/li[2]/div/ul/li[2]/div/label")
+female_gender = (By.XPATH, "//*[@id='section-design-type']/div[2]/div/div/div[2]/div/div[3]/ul/li[2]/div/ul/li[2]/div/label")
 
 #customizer
 searched_style = (By.XPATH, "//*[@class='uk-width-auto uk-first-column']/div[@class='t-t-uppercase t-w-semibold']")
